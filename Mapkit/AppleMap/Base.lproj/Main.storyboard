@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppleMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eUb-aa-RDd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fhs-ar-E6b"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r58-ex-FQS">
+                                <rect key="frame" x="16" y="38" width="343" height="54"/>
+                                <color key="backgroundColor" red="1" green="0.74509803919999995" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpd-0d-9qE">
+                                <rect key="frame" x="16" y="100" width="343" height="54"/>
+                                <color key="backgroundColor" red="1" green="0.74509803919999995" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fpd-0d-9qE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LwD-IX-kbz"/>
+                            <constraint firstItem="fpd-0d-9qE" firstAttribute="top" secondItem="r58-ex-FQS" secondAttribute="bottom" constant="8" id="NPH-hq-smu"/>
+                            <constraint firstItem="r58-ex-FQS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="SiF-3F-yin"/>
+                            <constraint firstItem="eUb-aa-RDd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WDg-Bh-BB1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eUb-aa-RDd" secondAttribute="bottom" id="chr-mq-ys6"/>
+                            <constraint firstItem="r58-ex-FQS" firstAttribute="height" secondItem="fpd-0d-9qE" secondAttribute="height" id="ehe-D5-LY0"/>
+                            <constraint firstItem="r58-ex-FQS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gca-bR-tFx"/>
+                            <constraint firstItem="r58-ex-FQS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gyY-RQ-Zk6"/>
+                            <constraint firstItem="eUb-aa-RDd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="o7j-J7-qCF"/>
+                            <constraint firstItem="fpd-0d-9qE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tAa-Be-KBR"/>
+                            <constraint firstAttribute="trailing" secondItem="eUb-aa-RDd" secondAttribute="trailing" id="xhh-Si-nyA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="latLabel" destination="r58-ex-FQS" id="YCD-it-p7m"/>
+                        <outlet property="longLabel" destination="fpd-0d-9qE" id="m4g-G9-Fbf"/>
+                        <outlet property="mapView" destination="eUb-aa-RDd" id="s8e-2S-X8E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
